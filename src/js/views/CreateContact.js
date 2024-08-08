@@ -20,7 +20,7 @@ export function CreateContact(){
             address: inputAddressValue
           };
 
-		fetch('https://playground.4geeks.com/todo/todos/chchalle', {
+		fetch('https://playground.4geeks.com/contact/agendas/chchalle', {
 			method: 'POST',
 			body: JSON.stringify(newContact),
 			headers: { 'Content-Type': 'application/json' }

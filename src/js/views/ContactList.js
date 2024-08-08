@@ -13,6 +13,10 @@ export const ContactList = () => {
 	actions.fetchContactagenda();
 	}, []);
 
+	const handleEditClick = (id) => {
+        navigate(`/edit-contact/${id}`);
+    };
+
 	const deleteContact = (contactId) => {
 		fetch(`https://playground.4geeks.com/todo/todos/${contactId}`, {
 			method: 'DELETE',
@@ -31,7 +35,7 @@ export const ContactList = () => {
 			onClick={()=> navigate("/create")}
 		>Create New Contact</button>
 		{store.contacts.map((contact)=>(
-			<div>
+			<div key={contact.id}>
 				<button
 				onClick={() => deleteContact(contact.id)}
 				>Delete Contact</button>
@@ -39,6 +43,7 @@ export const ContactList = () => {
 				<p>phone: {contact.phone}</p>
 				<p>email: {contact.email}</p>
 				<p>address: {contact.address}</p>
+				<button onClick={() => handleEditClick(contact.id)}>Edit</button>
 			</div>
 		))}
 	</div>
