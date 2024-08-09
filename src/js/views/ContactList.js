@@ -18,11 +18,11 @@ export const ContactList = () => {
     };
 
 	const deleteContact = (contactId) => {
-		fetch(`https://playground.4geeks.com/todo/todos/${contactId}`, {
+		fetch(`https://playground.4geeks.com/contact/agendas/chchalle/contacts/${contactId}`, {
 			method: 'DELETE',
 			headers: { 'Content-Type': 'application/json' }
 		})
-			.then(actions.fetchContactagenda())
+			.then(()=>actions.fetchContactagenda())
 			.catch((error) => {
 				console.error(error);
 			});

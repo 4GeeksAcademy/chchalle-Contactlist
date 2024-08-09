@@ -33,7 +33,7 @@ export function EditContact() {
             console.log(error);
         });
     };
-
+/*
     const getUserContacts = () => {
         fetch(`https://playground.4geeks.com/contact/agendas/chchalle/contacts/${id}`)
             .then(response => response.json())
@@ -47,10 +47,16 @@ export function EditContact() {
                 console.error(error);
             });
     };
-
+*/
     useEffect(() => {
         if (id) {
-            getUserContacts();
+            //find - finds first element of type () in this case contact
+            const currentContact=store.contacts.find((contact)=>contact.id==id)
+            setNameValue(currentContact.name);
+            setPhoneValue(currentContact.phone);
+            setEmailValue(currentContact.email);
+            setAddressValue(currentContact.address);
+ //           getUserContacts();
         }
     }, [id]);
 
