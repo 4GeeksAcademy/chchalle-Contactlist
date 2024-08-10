@@ -1,5 +1,6 @@
 import React, {useContext, useState, useEffect} from 'react';
 import { useNavigate } from "react-router-dom";
+import "../../styles/home.css";
 
 import {Context} from'../store/appContext';
 
@@ -39,8 +40,10 @@ export function CreateContact(){
 
     console.log({store});
     return(
-        <div>
+        <div className="container editpage">
+			  <h1 className="col-12 EditPageHeader">Create Contact Page</h1>
             <p>
+			<label for="name" class="form-label">Your Name</label>
                 <input
 					className="col-12"
 					type="text"
@@ -48,6 +51,7 @@ export function CreateContact(){
 					onChange={(event) => setNameValue(event.target.value)}
 					placeholder="Name"
 				/>
+				 <label for="phone" class="form-label">Your Phone Number</label>
                      <input
 					className="col-12"
 					type="text"
@@ -55,6 +59,7 @@ export function CreateContact(){
 					onChange={(event) => setPhoneValue(event.target.value)}
 					placeholder="phone Number"
 				/>
+				  <label for="email" class="form-label">Your Email</label>
                      <input
 					className="col-12"
 					type="text"
@@ -62,6 +67,7 @@ export function CreateContact(){
 					onChange={(event) => setEmailValue(event.target.value)}
 					placeholder="Email Address"
 				/>
+				  <label for="address" class="form-label">Your Address</label>
                      <input
 					className="col-12"
 					type="text"

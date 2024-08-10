@@ -1,0 +1,32 @@
+.row{
+    margin:15px;
+   
+}
+.contactBox  {
+    margin: 50 px;
+   
+    border: 1px solid grey;
+}
+.circle-image {
+   
+    width: 125px; 
+    height: 125px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+  }
+  .profilepiccont{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .deleteButton{
+
+  }
+  .editpage *{
+    margin: 5px;
+  }
+  .editTrashHolder{
+    display: flex;
+    justify-content: flex-end;
+    height: 30px;
+  }

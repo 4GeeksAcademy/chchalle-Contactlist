@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
+
 import { ContactList } from "./views/ContactList";
 import {CreateContact} from "./views/CreateContact";
 import {EditContact} from "./views/EditContact";

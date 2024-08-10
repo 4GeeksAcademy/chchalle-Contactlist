@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Context } from '../store/appContext';
+import "../../styles/home.css";
 
 export function EditContact() {
     const { store, actions } = useContext(Context);
@@ -61,30 +62,39 @@ export function EditContact() {
     }, [id]);
 
     return (
-        <div>
+        <div className="container editpage ">
+            <h1 className="col-12 EditPageHeader">Edit Contact Page</h1>
             <p>
+            <label for="name" class="form-label">Your Name</label>
                 <input
+                id="name"
                     className="col-12"
                     type="text"
                     value={inputNameValue}
                     onChange={(event) => setNameValue(event.target.value)}
                     placeholder="Name"
                 />
+                <label for="phone" class="form-label">Your Phone Number</label>
                 <input
+                id="phone"
                     className="col-12"
                     type="text"
                     value={inputPhoneValue}
                     onChange={(event) => setPhoneValue(event.target.value)}
                     placeholder="Phone Number"
                 />
+                     <label for="email" class="form-label">Your Email</label>
                 <input
+                id="email"
                     className="col-12"
                     type="text"
                     value={inputEmailValue}
                     onChange={(event) => setEmailValue(event.target.value)}
                     placeholder="Email Address"
                 />
+                 <label for="address" class="form-label">Your Address</label>
                 <input
+                id="address"
                     className="col-12"
                     type="text"
                     value={inputAddressValue}
